@@ -44,6 +44,13 @@ mixin formatHtmlCodeSimple(type, code)
     |
     |#{code}
 
+mixin formatHtmlCodeMultiline(type, ...args)
+  pre
+    span= type
+    each val in args
+      |
+      |#{val}
+
 mixin codeExampleBlock(title, divClass, pClass, ...args)
   hr
   h3= title

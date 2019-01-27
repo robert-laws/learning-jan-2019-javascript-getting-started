@@ -1,10 +1,13 @@
 .footer {
-  padding: 1rem 0;
+  padding: 4rem 0 4rem;
   background-color: darken($secondary-color, 2%);
 
   &__text {
     color: $color-white;
-    font-size: 1.5rem;
+    font: {
+      size: 1.7rem;
+      weight: medium;
+    }
     text-align: center;
   }
 }

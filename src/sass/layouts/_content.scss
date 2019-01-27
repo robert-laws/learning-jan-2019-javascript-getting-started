@@ -39,3 +39,15 @@ main {
     color: $secondary-color;
   }
 }
+
+.quote-section {
+  margin: 0.5rem 2rem 3rem;
+}
+
+.new-section {
+  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(#CCC, 0.35);
+}
