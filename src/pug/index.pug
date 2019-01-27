@@ -1,4 +1,40 @@
 extends layouts/default.pug
 
 block content
-  h1 Javascript - Getting Started
+  main.content-page
+    p.content-page__text
+      |This website demonstrates the examples from course Javascript: Getting Started available on Pluralsight.com. The list below shows specific examples of code from the course.
+    h3.content-page__title Table of Contents
+    ul.content-page__list
+      li
+        a(href="#") Basics
+      li
+        a(href="#") Types and Arrays
+      li
+        a(href="#") Program Flow
+      li
+        a(href="#") Functions
+      li
+        a(href="#") Objects
+      li
+        a(href="#") Web - Basic Events
+      li
+        a(href="#") Web - DOM Interactions
+      li
+        a(href="#") ...
+
+    hr
+
+    h3.content-page__title Code Samples
+
+    h4.content-page__title HTML Code Sample
+
+    +formatHtmlCodeComplex("HTML", false, "<img src='images/square.png' alt='square' title='image of a square'>", "<img src='images/triangle.png' alt='triangle' title='image of a triangle'>", "<img src='images/circle.png' alt='circle' title='image of a circle'>", "<img src='images/line.png' alt='line' title='image of a line'>")
+
+    h4.content-page__title Simple Attribute Selector
+
+    +formatCssCode("CSS", "[alt] {", "border: 1px dashed #000;", "}")
+
+    h4.content-page__title Simple Function
+
+    +formatCssCode("Javascript", "function getName(name) {", "var n = name;", "return n;", "}")

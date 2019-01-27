@@ -1,0 +1,41 @@
+main {
+  padding: 0 1rem;
+  font-size: 1.6rem;
+
+  hr {
+    margin: 3rem 0;
+    opacity: 0.25;
+  }
+}
+
+.content-page {
+  &__title {
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  &__text {
+    margin: 1rem 0;
+  }
+
+  &__list {
+    margin-left: 3rem;
+
+    li {
+      margin: 1rem 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link,
+  a:visited {
+    color: darken($secondary-color, 15%);
+  }
+
+  a:hover,
+  a:active {
+    color: $secondary-color;
+  }
+}

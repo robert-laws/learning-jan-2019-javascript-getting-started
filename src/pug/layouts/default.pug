@@ -3,5 +3,9 @@ html
   include ../includes/head.pug
   
   body
-    main
-      block content
+    include ../includes/mixins.pug
+    include ../includes/header.pug
+
+    block content
+
+    include ../includes/footer.pug

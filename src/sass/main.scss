@@ -3,11 +3,17 @@
 @import "abstracts/variables";
 @import "abstracts/colors";
 
+// HELPERS
+@import "helpers/syntax";
+
 // MIXINS - media queries, etc.
 @import "includes/mixins";
 
 // LAYOUT
 @import "layouts/layout";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/content";
 
 // COMPONENTS
 @import "components/components";

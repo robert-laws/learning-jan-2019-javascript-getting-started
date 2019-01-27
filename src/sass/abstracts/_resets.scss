@@ -14,10 +14,13 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  font-family: 'Open Sans', Verdana, sans-serif;
 }
 
 body {
-  line-height: 1.6;
+  line-height: 1.65;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 

@@ -1,0 +1,38 @@
+.header {
+  margin: 0 0 20px;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #DDD;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  &__logo {
+    flex: 0 1 30rem;
+  }
+
+  &__navigation {
+    flex: 1;
+    text-align: right;
+
+    a {
+      text-decoration: none;
+      margin: 0 1.25rem;
+      font: {
+        weight: bold;
+        size: 1.5rem;
+      }
+    }
+
+    a:link,
+    a:visited {
+      color: $primary-color;
+    }
+
+    a:hover,
+    a:active {
+      color: darken($primary-color, 20%);
+    }
+  }
+}
