@@ -1,0 +1,12 @@
+// MIXINS
+
+/*** media queries ***/
+
+// small tablets and large smartphones (landscape view)
+$screen-sm-min: 600px;
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
