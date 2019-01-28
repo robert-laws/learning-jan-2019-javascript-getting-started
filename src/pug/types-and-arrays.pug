@@ -25,7 +25,12 @@ block content
 
     +formatHtmlCodeMultiline("Javascript", "let value = 'apple';", "typeof(value); // string", "let newValue = 23;", "typeof(newValue); // number")
 
-    p One quirk with how numbers are handled is when adding two decimal point values. Another is dividing a number by zero, which results in Infinity rather than an error. Finally, when dividing 0 by 0 the result is NaN - not a number, but the type is number when checked.
+    p 
+      |One quirk with how numbers are handled is when adding two decimal point values. Another is dividing a number by zero, which results in 
+      span.code-short Infinity
+      | rather than an error. Finally, when dividing 0 by 0 the result is 
+      span.code-short NaN
+      | - not a number, but the type is number when checked.
 
     +formatHtmlCodeMultiline("Javascript", "let value = 2.6 + 4.1; // 6.699999999999999", "let value2 = 5 / 0; // Infinity", "let value3 = 0 / 0; // NaN", "typeof(value3); // number")
 
