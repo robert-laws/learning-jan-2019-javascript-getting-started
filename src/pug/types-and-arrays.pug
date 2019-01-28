@@ -21,24 +21,22 @@ block content
 
     h3.content-page__title#first String and Number Types
 
-    p Declare a variable with the let keyword. Variable names are more useful if they convey some meaning. Variable name use the camel case naming convention.
+    p Javascript has built-in functions that will identify the type of a variable.
 
-    +formatHtmlCodeMultiline("Javascript", "let productName = 'hammer',", "    personName = 'Bob';")
+    +formatHtmlCodeMultiline("Javascript", "let value = 'apple';", "typeof(value); // string", "let newValue = 23;", "typeof(newValue); // number")
+
+    p One quirk with how numbers are handled is when adding two decimal point values. Another is dividing a number by zero, which results in Infinity rather than an error. Finally, when dividing 0 by 0 the result is NaN - not a number, but the type is number when checked.
+
+    +formatHtmlCodeMultiline("Javascript", "let value = 2.6 + 4.1; // 6.699999999999999", "let value2 = 5 / 0; // Infinity", "let value3 = 0 / 0; // NaN", "typeof(value3); // number")
 
     h3.content-page__title.new-section#second Boolean Types
 
-    p Common errors for variables will include:
+    p Another type in Javascript is Boolean Types, which has the value of 
+      span.code-short true 
+      | or 
+      span.code-short false
 
-    ul.content-page__list
-      li 
-        strong Reference Error 
-        | - (variable not defined)
-      li 
-        strong Undefined 
-        | - often caused by a uninitialized variable
-      li 
-        strong Unexpected token 
-        | - often due to using reserved keywords (ex. class, super)
+    +formatHtmlCodeMultiline("Javascript", "let value = false;", "typeof(value); // boolean")
 
     h3.content-page__title.new-section#third undefined and null
 
