@@ -1,0 +1,65 @@
+extends layouts/default.pug
+
+block content
+  main.content-page
+    h3.content-page__title Types and Arrays
+    h4.content-page__title Content Covered
+
+    ul.content-page__list
+      li 
+        a(href="#first") String and Number Types
+      li 
+        a(href="#second") Boolean Types
+      li 
+        a(href="#third") undefined and null
+      li 
+        a(href="#fourth") Arrays
+      li 
+        a(href="#fifth") Array Features
+
+    hr
+
+    h3.content-page__title#first String and Number Types
+
+    p Declare a variable with the let keyword. Variable names are more useful if they convey some meaning. Variable name use the camel case naming convention.
+
+    +formatHtmlCodeMultiline("Javascript", "let productName = 'hammer',", "    personName = 'Bob';")
+
+    h3.content-page__title.new-section#second Boolean Types
+
+    p Common errors for variables will include:
+
+    ul.content-page__list
+      li 
+        strong Reference Error 
+        | - (variable not defined)
+      li 
+        strong Undefined 
+        | - often caused by a uninitialized variable
+      li 
+        strong Unexpected token 
+        | - often due to using reserved keywords (ex. class, super)
+
+    h3.content-page__title.new-section#third undefined and null
+
+    p Important to omit quotes around numbers - they will be interpreted as strings and not numbers.
+
+    +formatHtmlCodeMultiline("Javascript", "let firstName = 'Billy'", "let studentCount = 32", "let topScore = '64' // this is a string, not a number")
+
+    p Using the plus (+) symbol does two different things with numbers and with strings. With numbers, it will add the values. With strings, it will concatenate the strings together.
+
+    +formatHtmlCodeMultiline("Javascript", "let firstName = 'Billy'", "let lastName = 'Bounce'", "firstName + ' ' + lastName; // Billy Bounce")
+
+    +formatHtmlCodeMultiline("Javascript", "let studentCount = 23", "let studentsMissing = 4", "studentCount + studentsMissing; // 27")
+
+    h3.content-page__title.new-section#fourth Arrays
+
+    p Several mathematical operators come built into Javascript.
+
+    +formatHtmlCodeMultiline("Javascript", "let first = 12,", "    second = 3;", "", "let answer = first + second; // 15", "let answer = first - second; // 9", "let answer = first * second; // 36", "let answer = first / second; // 4", "let answer = first % second; // 0", "let answer = (3 + 4) * 5; // 35")
+
+    h3.content-page__title.new-section#fifth Array Features
+
+    p Can be added as either single line or multiline comments
+
+    +formatHtmlCodeMultiline("Javascript", "// This is a single line comment", "/*", "  This is a multiline comment", "  and can be very long sometimes", "*/", "let name = 'Hal'; // comments okay on same line as code")
