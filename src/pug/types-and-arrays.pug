@@ -45,24 +45,50 @@ block content
 
     h3.content-page__title.new-section#third undefined and null
 
-    p Important to omit quotes around numbers - they will be interpreted as strings and not numbers.
+    p Variables are initialized with undefined if no value is assigned. If developers want to set a variable to nothing, 
+      span.code-short null
+      | is used.
 
-    +formatHtmlCodeMultiline("Javascript", "let firstName = 'Billy'", "let studentCount = 32", "let topScore = '64' // this is a string, not a number")
-
-    p Using the plus (+) symbol does two different things with numbers and with strings. With numbers, it will add the values. With strings, it will concatenate the strings together.
-
-    +formatHtmlCodeMultiline("Javascript", "let firstName = 'Billy'", "let lastName = 'Bounce'", "firstName + ' ' + lastName; // Billy Bounce")
-
-    +formatHtmlCodeMultiline("Javascript", "let studentCount = 23", "let studentsMissing = 4", "studentCount + studentsMissing; // 27")
+    +formatHtmlCodeMultiline("Javascript", "let salesTax; // type is undefined", "salesTax = null // type is now null")
 
     h3.content-page__title.new-section#fourth Arrays
 
-    p Several mathematical operators come built into Javascript.
+    p Arrays are meant to store multiple pieces of data into a single variable.
 
-    +formatHtmlCodeMultiline("Javascript", "let first = 12,", "    second = 3;", "", "let answer = first + second; // 15", "let answer = first - second; // 9", "let answer = first * second; // 36", "let answer = first / second; // 4", "let answer = first % second; // 0", "let answer = (3 + 4) * 5; // 35")
+    +formatHtmlCodeMultiline("Javascript", "let items = [1, 2, 3]; // initializes an array", "items[0]; // returns 1", "items[3]; // returns undefined")
+
+    p Arrays can hold any data type, even mixed types of data, even though this isn't a common practice.
+
+    +formatHtmlCodeMultiline("Javascript", "let cards = [24, 'King', true, 'Jack'];", "cards[1]; // King")
 
     h3.content-page__title.new-section#fifth Array Features
 
-    p Can be added as either single line or multiline comments
+    p Arrays have several built-in methods in Javascript that can be used to manipulate arrays.
 
-    +formatHtmlCodeMultiline("Javascript", "// This is a single line comment", "/*", "  This is a multiline comment", "  and can be very long sometimes", "*/", "let name = 'Hal'; // comments okay on same line as code")
+    p Some methods that can be used include 
+      span.code-short .length
+      | to determine the number of items in an array 
+      span.code-short .push()
+      | to add an value to the end of an array
+
+    +formatHtmlCodeMultiline("Javascript", "let values = [2, 5, 12, 26];", "values.length; // 4", "values.push(5); // [2, 5, 12, 26, 5]")
+
+    p Using another method 
+      span.code-short .pop()
+      | will remove the last item from array and can store it in a variable
+
+    +formatHtmlCodeMultiline("Javascript", "let values = [2, 5, 12, 26];", "let val = values.pop(); // val = 26")
+
+    p To remove the first value from the array the method 
+      span.code-short .shift()
+      | will remove the first value and the value can be stored in a variable
+
+    +formatHtmlCodeMultiline("Javascript", "let values = [2, 5, 12, 26];", "let val = values.shift(); // val = 2")
+
+    p To remove a particular value from an array 
+      span.code-short .splice(index, number of values to delete, any items to be added)
+      | can be used to add values to the beginning of the array.
+
+    +formatHtmlCodeMultiline("Javascript", "let values = [2, 5, 12, 26];", "values.splice(0, 1);", "values // [5, 12, 26]")
+
+    p There are many more array methods.
