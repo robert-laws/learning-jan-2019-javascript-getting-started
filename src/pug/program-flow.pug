@@ -1,0 +1,63 @@
+extends layouts/default.pug
+
+block content
+  main.content-page
+    h3.content-page__title Program Flow
+    h4.content-page__title Content Covered
+
+    ul.content-page__list
+      li 
+        a(href="#first") Conditionals with if
+      li 
+        a(href="#second") if ... else
+      li 
+        a(href="#third") switch and case
+      li 
+        a(href="#fourth") Looping with for
+      li 
+        a(href="#fifth") Looping with while
+
+    hr
+
+    h3.content-page__title#first Conditionals with if
+
+    p Javascript has built-in functions that will identify the type of a variable.
+
+    +formatHtmlCodeMultiline("Javascript", "if (4 > 12) {", "  console.log('It is greater value');", "}")
+
+    +formatHtmlCodeMultiline("Javascript", "let name = 'Hal';", "let value = 0", "if (name === 'Bob') {", "  value = 10;", "}", "// value = 0")
+
+    h4 truthy and falsy values
+
+    p 
+      |Some examples of values that will resolve to the boolean false within a conditional statement are 
+      span.code-short false
+      | , 
+      span.code-short 0
+      | , 
+      span.code-short ""
+      | , 
+      span.code-short null
+      | , 
+      span.code-short undefined
+      | , and 
+      span.code-short NaN
+
+    p 
+      |Likewise, examples of values that will resolve to the boolean true within a conditional statement are 
+      span.code-short true
+      | , 
+      span.code-short 0.5
+      | or any number, 
+      span.code-short "5"
+      | or any string
+
+    +formatHtmlCodeMultiline("Javascript", "let name = 'Bob';", "if (name) {", "  console.log('There is a name defined');", "}")
+
+    h3.content-page__title#second if ... else
+
+    h3.content-page__title#third switch and case
+
+    h3.content-page__title#fourth Looping with for
+
+    h3.content-page__title#fifth Looping with while
