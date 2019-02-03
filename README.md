@@ -1,5 +1,7 @@
 # Learning - Javascript: Getting Started - course from Pluralsight
 
+[Website with examples for repository](https://learning-jan-2019-javascript-getting-started.netlify.com)
+
 Following along with the course content
 
 1. Javascript Basics
