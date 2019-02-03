@@ -27,7 +27,7 @@ block content
 
     +formatHtmlCodeMultiline("Javascript", "let name = 'Hal';", "let value = 0", "if (name === 'Bob') {", "  value = 10;", "}", "// value = 0")
 
-    h4 truthy and falsy values
+    h4 * truthy and falsy values
 
     p 
       |Some examples of values that will resolve to the boolean false within a conditional statement are 
@@ -56,8 +56,36 @@ block content
 
     h3.content-page__title#second if ... else
 
+    p
+      |Is used to include an alternate operation(s) if the initial if statement is false.
+
+    +formatHtmlCodeMultiline("Javascript", "if (value > 5) {", "  console.log('Achievement reached!');", "} else {", "  console.log('Keep working);'", "}")
+
     h3.content-page__title#third switch and case
+
+    p
+      |The combined statements 
+      span.code-short switch
+      | and 
+      span.code-short case
+      | can be used to execute conditional logic within Javascript. 
+
+    +formatHtmlCodeMultiline("Javascript", "let name = 'Hal';", "switch(name) {", "  case 'Bob':", "    console.log('Bob found!');", "    break;", "  case 'Jim':", "    console.log('Jim found!');", "    break;", "  case 'Hal':", "    console.log('Hal found!');", "    break;", "  default:", "    console.log('Person not found!');", "}")
 
     h3.content-page__title#fourth Looping with for
 
+    p
+      |In certain cases, repeating a block of code is necessary. One of the best ways to achieve this is by using a loop. The most common type of loop is the 
+      span.code-short for()
+      | statement.
+
+    +formatHtmlCodeMultiline("Javascript", "for (let i = 0; i < 3; i++) {", "  console.log('current count is' + i + '.');", "}", "// results: current count is 0, 1, 2.")
+
     h3.content-page__title#fifth Looping with while
+
+    p
+      |Another looping technique in Javascript is using the 
+      span.code-short while()
+      | loop. The idea behind this type of loop is that while the condition in the statement is true, the code block will run. As long as there's a way to make the condition false, the loop will eventually end.
+
+    +formatHtmlCodeMultiline("Javascript", "let count = 1;", "while (count < 3) {", "  console.log(count);", "  count++;", "}", "// results: 0, 1, 2")
