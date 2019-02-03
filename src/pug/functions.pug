@@ -19,8 +19,48 @@ block content
 
     h3.content-page__title#first Functions basics
 
+    p
+      |Functions allow you to run code at any point of your program. They're declared with the syntax 
+      span.code-short function nameOfFunction()
+      | and can be called by referencing the function name.
+
+    +formatHtmlCodeMultiline("Javascript", "function getMessage() {", "  console.log('from a function');", "}")
+
+    p Unless the function is called, the code inside the function will never run. The function can be called the following way.
+
+    +formatHtmlCodeMultiline("Javascript", "getMessage();", "// from a function")
+
     h3.content-page__title#second Passing Information to Functions
+
+    p Functions are powerful in the way they can access information passed into them to process in some way.
+
+    +formatHtmlCodeMultiline("Javascript", "function showMessage(message) {", "  console.log(message);", "}")
+
+    p Functions can take more than zero, one or more pieces of information, usually called arguments, passed into it.
+
+    +formatHtmlCodeMultiline("Javascript", "function getFullName(firstName, lastName) {", "  console.log('my name is ' + firstName + ' ' + lastName;", "}")
+
+    p When calling this function, it expects two arguments to be supplied.
+
+    +formatHtmlCodeMultiline("Javascript", "getFullName('Bob', 'Cobb');", "// my name is Bob Cobb")
 
     h3.content-page__title#third Function Return Values
 
+    p 
+      |When creating function, the programmer can specify what information they want returned using the 
+      span.short-code return
+      | keyword within the function definition.
+
+    +formatHtmlCodeMultiline("Javascript", "function squareNumber(number) {", "  let squaredResult = number * number;", "  return squaredResult;", "}")
+
+    p Calling this function will result in the function returning the value specified by the return keyword. The returned value of a function can be assigned to a variable.
+
+    +formatHtmlCodeMultiline("Javascript", "let value = squareNumber(4);", "value // 16")
+
     h3.content-page__title#fourth Function Scope
+
+    p Variable created within a function is not accessible outside of the function.
+
+    +formatHtmlCodeMultiline("Javascript", "function showMessage() {", "  let myMessage = 'hello there!';", "}")
+
+    p Attempting to call the variable 'myMessage' from the above code outside of the function will result in an error due to scope.
