@@ -7,30 +7,74 @@ block content
 
     ul.content-page__list
       li 
-        a(href="#first") Conditionals with if
+        a(href="#first") Object basics
       li 
-        a(href="#second") if ... else
+        a(href="#second") Passing objects to function
       li 
-        a(href="#third") switch and case
+        a(href="#third") Arrays of objects
       li 
-        a(href="#fourth") Looping with for
-      li 
-        a(href="#fifth") Looping with while
+        a(href="#fourth") Javascript built-in objects
 
     hr
 
-    h3.content-page__title#first Conditionals with if
-   
+    h3.content-page__title#first Object basics 
 
-    h3.content-page__title.new-section#second if ... else
-    
+    p Javascript objects are ideal for storing complex information, typically in key, value pairs. Objects can store any type of data - strings, numbers, boolean, etc.
 
-    h3.content-page__title.new-section#third switch and case
-   
+    +formatHtmlCodeMultiline("Javascript", "let candidate = {", "  name: 'Bob',", "  age: 32,", "  employed: false", "}")
 
-    h3.content-page__title.new-section#fourth Looping with for
-    
+    p Values from an object can be retrieved by calling the object and the desired key.
 
-    h3.content-page__title.new-section#fifth Looping with while
+    +formatHtmlCodeMultiline("Javascript", "console.log(candidate.name);", "// Bob")
 
-    
+    h3.content-page__title.new-section#second Passing objects to function
+
+    p Objects can be passed into functions and manipulated as if they're any basic type of data.
+
+    +formatHtmlCodeMultiline("Javascript", "function changeName(person) {", "  person.name = 'Hal';", "}")
+
+    p Calling the function will result in a change to the object value stored in the name key.
+
+    +formatHtmlCodeMultiline("Javascript", "changeName(candidate);", "candidate.name; // Hal")
+
+    p Functions can change values within objects passed to them.
+
+    h3.content-page__title.new-section#third Arrays of objects
+
+    p A common design pattern is to create arrays that are made up of objects.
+
+    +formatHtmlCodeMultiline("Javascript", "let cards = [", "  {", "    suit: 'Hearts',", "    value: 'Queen'", "  },", "  {", "    suit: 'Clubs',", "    value: 'King'", "  }", "];")
+
+    p Accessing the values of the objects within the array can be done by targeting the appropriate index of the array.
+
+    +formatHtmlCodeMultiline("Javascript", "console.log(cards[1].value);", "// King")
+
+    h3.content-page__title.new-section#fourth Javascript built-in objects
+
+    p 
+      |There are several built-in objects that come with Javascript. They include 
+      span.code-short Math
+      |, 
+      span.code-short Date
+      |, 
+      span.code-short String
+      |, and 
+      span.code-short Number
+      |.
+
+    +formatHtmlCodeMultiline("Javascript", "let result = Math.random();", "console.log(result);", "// 0.3248668742223313")
+
+    p Performing operations using the built-in objects can help with complex tasks in a program.
+
+    +formatHtmlCodeMultiline("Javascript", "let result = Math.random() * 52;", "result = Math.trunc(result);", "console.log(result);", "// 23")
+
+    p
+      |Another example is the 
+      span.code-short Date
+      | object.
+
+    +formatHtmlCodeMultiline("Javascript", "let date = new Date().toDateString();", "console.log(date)", "// Sun Feb 03 2019")
+
+    p The String object comes with many useful built-in functions.
+
+    +formatHtmlCodeMultiline("Javascript", "let name = 'bob';", "name.toUpperCase();", "console.log(name);", "// BOB")

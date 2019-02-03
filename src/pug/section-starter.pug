@@ -1,0 +1,26 @@
+extends layouts/default.pug
+
+block content
+  main.content-page
+    h3.content-page__title Section
+    h4.content-page__title Content Covered
+
+    ul.content-page__list
+      li 
+        a(href="#first")
+      li 
+        a(href="#second")
+      li 
+        a(href="#third")
+      li 
+        a(href="#fourth")
+
+    hr
+
+    h3.content-page__title#first
+
+    h3.content-page__title.new-section#second
+
+    h3.content-page__title.new-section#third
+
+    h3.content-page__title.new-section#fourth
