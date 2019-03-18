@@ -69,6 +69,28 @@ names.forEach(function(element) {
 
 ## Functions
 
+The important aspects of functions include declaring a function, calling a function, adding arguments to a function, the return value of a function, and function scope.
+
+```javascript
+// declare a function
+function greeting() {
+  console.log("hello");
+}
+
+greeting(); // call a function
+
+// adding an argument to a function
+function greeting(name) {
+  console.log("hello " + name);
+}
+
+// getting a return value from a function
+function greeting(name) {
+  var response = "hello " + name; // the variable response is only accessible from within the function
+  return response;
+}
+```
+
 ## Objects
 
 ## Web Pages - Basic Events
