@@ -1,19 +1,76 @@
 # Learning - Javascript: Getting Started - course from Pluralsight
 
-[Website with examples for repository](https://learning-jan-2019-javascript-getting-started.netlify.com)
+[Website for Course](https://learning-jan-2019-javascript-getting-started.netlify.com)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bba422f6-2b1e-46aa-b3ba-04de7b5df0d2/deploy-status)](https://app.netlify.com/sites/learning-jan-2019-javascript-getting-started/deploys)
 
 Following along with the course content
 
-1. Javascript Basics
+* [Javascript Basics](#javascript-basics)
+* [Types and Arrays](#types-and-arrays)
+* [Program Flow](#program-flow)
+* [Functions](#functions)
+* [Objects](#objects)
+* [Web Pages - Basic Events](#web-pages---basic-events)
+* [Web Pages - DOM Interactions](#web-pages---dom-interactions)
 
-1. Types and Arrays
+---
 
-1. Program Flow
+## Javascript Basics
 
-1. Functions
+```javascript
+var name = "bob"; // declare and assign a variable
+```
 
-1. Objects
+## Types and Arrays
 
-1. Web Pages - Basic Events
+Types include string, number, boolean, object, null, and undefined (and symbols).
 
-1. Web Pages - DOM Interactions
+```javascript
+var choice = false;
+typeof(choice); // boolean
+```
+
+```javascript
+var name = "Bob";
+console.log(`greetings ${name}`); // greetings bob - interpolation of the variable name via es6
+```
+
+## Program Flow
+
+The major program flow techniques are using `if`, `if...else`, `switch...case`, and looping with `for`, `do...while`, `while`, and `for...in` (also `forEach`)
+
+```javascript
+var names = ['bob', 'hal', 'kal', 'ned'];
+
+if(typeof(names) == 'object') {
+  console.log("type is object");
+} else {
+  console.log("type is not an object");
+}
+
+// for loop
+for(var i = 0; i < names.length; i++) {
+  console.log(names[i]);
+}
+
+// while
+var i = 0;
+while(i < names.length) {
+  console.log(names[i]);
+  i++;
+}
+
+// forEach
+names.forEach(function(element) {
+  console.log(element);
+});
+```
+
+## Functions
+
+## Objects
+
+## Web Pages - Basic Events
+
+## Web Pages - DOM Interactions
