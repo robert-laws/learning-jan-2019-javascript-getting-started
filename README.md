@@ -93,6 +93,51 @@ function greeting(name) {
 
 ## Objects
 
+Objects typically exist a key, value pairs.
+
+```javascript
+{
+  "name":"Bob",
+  "age": 34
+}
+```
+
+Data within an object can be accessed using dot notation.
+
+```javascript
+var person = {
+  "name":"Bob",
+  "age": 34
+}
+
+person.name; // 'Bob'
+```
+
+An array of objects is a common way objects are used.
+
+```javascript
+var names = [
+  {
+    "name":"Bob",
+    "age":34
+  },
+  {
+    "name":"Hal",
+    "age":62
+  },
+  {
+    "name":"Kal",
+    "age":21
+  }
+]
+
+names[1].age; // 62
+```
+
 ## Web Pages - Basic Events
 
+Events can be attached to elements on the page and triggered by user interactions.
+
 ## Web Pages - DOM Interactions
+
+The webpage is a document made up of different objects. These objects can initiate or respond to different events and actions taken by the user.
